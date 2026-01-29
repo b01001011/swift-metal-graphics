@@ -12,7 +12,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "MetalGraphics"
+            name: "Core",
+            publicHeadersPath: "Public"
+        ),
+        .target(
+            name: "MetalGraphics",
+            dependencies: ["Core"]
         ),
         .testTarget(
             name: "MetalGraphicsTests",

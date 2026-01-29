@@ -7,15 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2718AA2F2B74160038DDDC /* Lenna.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2718A92F2B74160038DDDC /* Lenna.png */; };
+		BF2718AB2F2B74160038DDDC /* Lenna.png in Resources */ = {isa = PBXBuildFile; fileRef = BF2718A92F2B74160038DDDC /* Lenna.png */; };
+		BF2718AE2F2B88590038DDDC /* MTGContext+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2718AD2F2B88440038DDDC /* MTGContext+Ext.swift */; };
+		BF2718AF2F2B88590038DDDC /* MTGContext+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2718AD2F2B88440038DDDC /* MTGContext+Ext.swift */; };
+		BF4BF0E92F1FB93A00A822B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4BF0E62F1FB93A00A822B2 /* Assets.xcassets */; };
 		BF4BF0FA2F20964800A822B2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BF0F92F2094A500A822B2 /* MainView.swift */; };
 		BF4BF0FB2F20964800A822B2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BF0F92F2094A500A822B2 /* MainView.swift */; };
 		BF4BF0FD2F20971D00A822B2 /* SaturationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BF0FC2F20971D00A822B2 /* SaturationView.swift */; };
 		BF4BF0FE2F20971D00A822B2 /* SaturationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BF0FC2F20971D00A822B2 /* SaturationView.swift */; };
+		BF4BF1042F20C01600A822B2 /* MetalGraphics in Frameworks */ = {isa = PBXBuildFile; productRef = BF4BF1032F20C01600A822B2 /* MetalGraphics */; };
+		BF4BF1062F20C02C00A822B2 /* MetalGraphics in Frameworks */ = {isa = PBXBuildFile; productRef = BF4BF1052F20C02C00A822B2 /* MetalGraphics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF2718A92F2B74160038DDDC /* Lenna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lenna.png; sourceTree = "<group>"; };
+		BF2718AD2F2B88440038DDDC /* MTGContext+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTGContext+Ext.swift"; sourceTree = "<group>"; };
 		BF34EEB12F1F7C14006E62A0 /* CaseStudies-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaseStudies-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4BF0BF2F1FB85200A822B2 /* CaseStudies-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaseStudies-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF4BF0E62F1FB93A00A822B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF4BF0F92F2094A500A822B2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BF4BF0FC2F20971D00A822B2 /* SaturationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4BF1042F20C01600A822B2 /* MetalGraphics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,18 +56,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4BF1062F20C02C00A822B2 /* MetalGraphics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF2718A82F2B73E90038DDDC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF2718A92F2B74160038DDDC /* Lenna.png */,
+				BF4BF0E62F1FB93A00A822B2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BF2718AC2F2B88300038DDDC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				BF2718AD2F2B88440038DDDC /* MTGContext+Ext.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		BF34EEA82F1F7C14006E62A0 = {
 			isa = PBXGroup;
 			children = (
 				BF4BF0F82F20945400A822B2 /* App */,
 				BF4BF0C02F1FB85200A822B2 /* CaseStudies-iOS */,
 				BF34EEB32F1F7C14006E62A0 /* CaseStudies-macOS */,
+				BF4BF1022F20C01600A822B2 /* Frameworks */,
 				BF34EEB22F1F7C14006E62A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,10 +103,19 @@
 		BF4BF0F82F20945400A822B2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				BF2718AC2F2B88300038DDDC /* Extentions */,
+				BF2718A82F2B73E90038DDDC /* Resources */,
 				BF4BF0F92F2094A500A822B2 /* MainView.swift */,
 				BF4BF0FC2F20971D00A822B2 /* SaturationView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		BF4BF1022F20C01600A822B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +138,7 @@
 			);
 			name = "CaseStudies-macOS";
 			packageProductDependencies = (
+				BF4BF1032F20C01600A822B2 /* MetalGraphics */,
 			);
 			productName = CaseStudies;
 			productReference = BF34EEB12F1F7C14006E62A0 /* CaseStudies-macOS.app */;
@@ -121,6 +161,7 @@
 			);
 			name = "CaseStudies-iOS";
 			packageProductDependencies = (
+				BF4BF1052F20C02C00A822B2 /* MetalGraphics */,
 			);
 			productName = "CaseStudies-iOS";
 			productReference = BF4BF0BF2F1FB85200A822B2 /* CaseStudies-iOS.app */;
@@ -172,6 +213,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2718AB2F2B74160038DDDC /* Lenna.png in Resources */,
+				BF4BF0E92F1FB93A00A822B2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2718AA2F2B74160038DDDC /* Lenna.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2718AF2F2B88590038DDDC /* MTGContext+Ext.swift in Sources */,
 				BF4BF0FE2F20971D00A822B2 /* SaturationView.swift in Sources */,
 				BF4BF0FB2F20964800A822B2 /* MainView.swift in Sources */,
 			);
@@ -198,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2718AE2F2B88590038DDDC /* MTGContext+Ext.swift in Sources */,
 				BF4BF0FD2F20971D00A822B2 /* SaturationView.swift in Sources */,
 				BF4BF0FA2F20964800A822B2 /* MainView.swift in Sources */,
 			);
@@ -497,6 +543,19 @@
 			relativePath = "../../../swift-metal-graphics";
 		};
 /* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF4BF1032F20C01600A822B2 /* MetalGraphics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF4BF0A22F1FB1C000A822B2 /* XCLocalSwiftPackageReference "../../../swift-metal-graphics" */;
+			productName = MetalGraphics;
+		};
+		BF4BF1052F20C02C00A822B2 /* MetalGraphics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF4BF0A22F1FB1C000A822B2 /* XCLocalSwiftPackageReference "../../../swift-metal-graphics" */;
+			productName = MetalGraphics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF34EEA92F1F7C14006E62A0 /* Project object */;
 }
