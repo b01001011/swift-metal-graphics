@@ -16,8 +16,16 @@ let package = Package(
             publicHeadersPath: "Public"
         ),
         .target(
+            name: "FilterBuiltins",
+            dependencies: ["Core"],
+            publicHeadersPath: "Public"
+        ),
+        .target(
             name: "MetalGraphics",
-            dependencies: ["Core"]
+            dependencies: [
+                "Core",
+                "FilterBuiltins"
+            ]
         ),
         .testTarget(
             name: "MetalGraphicsTests",
