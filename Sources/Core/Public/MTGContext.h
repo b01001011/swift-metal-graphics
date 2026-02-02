@@ -5,6 +5,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+__attribute__((objc_subclassing_restricted))
 @interface MTGContext : NSObject
 
 - (CGImageRef _Nullable)createCGImage:(MTGImage *)image

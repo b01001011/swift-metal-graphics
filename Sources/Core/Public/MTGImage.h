@@ -4,7 +4,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MTGImage : NSObject
 
-- (instancetype)initWithContentsOfURL:(NSURL *)URL;
+- (instancetype)initWithContentsOfURL:(NSURL *)URL NS_DESIGNATED_INITIALIZER;
     
 @end
 

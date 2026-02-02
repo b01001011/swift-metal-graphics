@@ -1,15 +1,12 @@
-#import "MTGImageExpression.h"
+#import "Expression/MTGCGImageExpression.h"
 
-#import <CoreImage/CoreImage.h>
-#import <CoreImage/CIFilterBuiltins.h>
-
-@interface MTGImageExpression ()
+@interface MTGCGImageExpression ()
 
 @property (nonatomic, readonly) CGImageRef image;
 
 @end
 
-@implementation MTGImageExpression
+@implementation MTGCGImageExpression
 
 - (instancetype)initWithCGImage:(CGImageRef)cgImage {
     self = [super init];
@@ -27,6 +24,12 @@
 
 - (id)copyWithZone:(NSZone *)zone {
     return self;
+}
+
+#pragma mark - MTGExpression
+
+- (MTGTexture *)evaluate {
+    return nil;
 }
 
 @end
