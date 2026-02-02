@@ -9,9 +9,20 @@ struct SaturationView: View {
     
     @StateObject private var context = MTGContext()
     
-    private func filter(_ image: MTGImage) throws -> Bool {
+    private func filter(_ image: MTGImage) throws -> CGImage? {
         let filter = MTGFilter.colorControls()
-        return true
+        filter.inputImage = image
+        filter.saturation = 1
+        
+        guard let outputImage = filter.outputImage else {
+            throw NSError(domain: "Filter", code: 0, userInfo: [NSLocalizedDescriptionKey: "Output is nil"])
+        }
+
+        guard let cgImage = context.createCGImage(outputImage, from: .zero) else {
+            throw NSError(domain: "Filter", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to create CGImage"])
+        }
+        
+        return cgImage
     }
     
     var body: some View {
@@ -19,13 +30,13 @@ struct SaturationView: View {
             switch Result(catching: {
                 try filter(image)
             }) {
-            case .success:
+            case .success(let cgImage):
                 VStack {
                 
                 }
-            case .failure:
+            case .failure(let error):
                 VStack {
-                    
+                    Text("Failed to filter image: \(error.localizedDescription)")
                 }
             }
         }

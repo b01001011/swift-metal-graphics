@@ -1,6 +1,14 @@
 #import "MTGImage.h"
+#import "MTGImageExpression.h"
 
 #import <CoreImage/CoreImage.h>
+#import <CoreImage/CIFilterBuiltins.h>
+
+@interface MTGImage ()
+
+@property (nonatomic, strong, readonly) MTGImageExpression *expression;
+
+@end
 
 @implementation MTGImage
 
@@ -16,20 +24,25 @@
         return nil;
     }
 
-    CGImageRef image = CGImageSourceCreateImageAtIndex(source, 0, nil);
+    CGImageRef cgImage = CGImageSourceCreateImageAtIndex(source, 0, nil);
 
     CFRelease(source);
 
-    if(!image) {
+    if(!cgImage) {
         return nil;
     }
     
-    self = [super init];
+    self = [self initWithExpression: [[MTGImageExpression alloc] initWithCGImage:cgImage]];
     
-    if(self) {
+    CGImageRelease(cgImage);
+    
+    return self;
+}
 
+- (instancetype)initWithExpression:(MTGImageExpression *)expression {
+    if (self = [super init]) {
+        _expression = [expression copyWithZone:nil];
     }
-    
     return self;
 }
 
