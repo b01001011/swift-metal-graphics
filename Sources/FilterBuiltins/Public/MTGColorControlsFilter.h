@@ -1,5 +1,4 @@
-#import "MTGFilter.h"
-#import "MTGImage.h"
+@import Core;
 
 NS_ASSUME_NONNULL_BEGIN
 

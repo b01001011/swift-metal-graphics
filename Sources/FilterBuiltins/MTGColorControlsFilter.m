@@ -11,8 +11,9 @@
     if(!_inputImage) {
         return nil;
     }
-    
-    return [MTGImage new];
+
+    MTGRenderPlanExpression *expression = [[MTGRenderPlanExpression alloc] initWithRenderPlan: [MTGRenderPlan new]];
+    return [[MTGImage alloc] initWithExpression:expression];
 }
 
 @end

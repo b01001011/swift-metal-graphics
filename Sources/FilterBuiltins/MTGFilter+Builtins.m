@@ -1,5 +1,4 @@
-#import "MTGColorControlsFilter.h"
-#import "MTGFilter.h"
+#import "MTGFilter+Builtins.h"
 
 @implementation MTGFilter (Builtins)
 

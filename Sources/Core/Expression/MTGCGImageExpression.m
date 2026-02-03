@@ -1,4 +1,4 @@
-#import "Expression/MTGCGImageExpression.h"
+#import "MTGCGImageExpression.h"
 
 @interface MTGCGImageExpression ()
 

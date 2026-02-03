@@ -1,4 +1,6 @@
-#import "MTGFilter.h"
+#import "MTGColorControlsFilter.h"
+
+@import Core;
 
 NS_ASSUME_NONNULL_BEGIN
 
