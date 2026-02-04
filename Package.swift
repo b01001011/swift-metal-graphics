@@ -13,11 +13,17 @@ let package = Package(
     targets: [
         .target(
             name: "Core",
+            dependencies: ["Kernel"],
             publicHeadersPath: "Public"
         ),
         .target(
             name: "FilterBuiltins",
-            dependencies: ["Core"],
+            dependencies: ["Core", "Kernel"],
+            publicHeadersPath: "Public"
+        ),
+        .target(
+            name: "Kernel",
+            dependencies: [],
             publicHeadersPath: "Public"
         ),
         .target(

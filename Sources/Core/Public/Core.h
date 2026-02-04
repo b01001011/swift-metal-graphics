@@ -1,4 +1,5 @@
 #import "MTGCGImageExpression.h"
+#import "MTGColor.h"
 #import "MTGContext.h"
 #import "MTGFilter.h"
 #import "MTGImage.h"

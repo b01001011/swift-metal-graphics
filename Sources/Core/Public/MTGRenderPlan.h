@@ -1,17 +1,17 @@
 #import <Metal/Metal.h>
 #import <Foundation/Foundation.h>
 
+@import Kernel;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MTGRenderPlan : NSObject
 
-//@property (nonatomic, strong, readonly, nullable) id<MTLTexture> texture;
-//
-//- (instancetype)init NS_UNAVAILABLE;
-//+ (instancetype)new NS_UNAVAILABLE;
-//
-//- (instancetype)initWithTexture:(id<MTLTexture>)texture NS_DESIGNATED_INITIALIZER;
-//    
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+- (instancetype)initWithKernel:(MTGRenderPipelineKernel *)kernel NS_DESIGNATED_INITIALIZER;
+    
 @end
 
 NS_ASSUME_NONNULL_END

@@ -21,7 +21,7 @@ struct SaturationView: View {
         guard let cgImage = context.createCGImage(outputImage, from: .zero) else {
             throw NSError(domain: "Filter", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to create CGImage"])
         }
-        
+
         return cgImage
     }
     
