@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
                        blue:(float)blue
                       alpha:(float)alpha NS_DESIGNATED_INITIALIZER;
 
-+ (MTGColor *)white NS_SWIFT_NAME(whiteColor);
++ (MTGColor *)white;
 + (simd_float3)lumaCoefficient;
 
 @end

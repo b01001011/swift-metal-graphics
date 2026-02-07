@@ -41,8 +41,8 @@
 
     MTGRenderPipelineKernel *kernel = [[MTGRenderPipelineKernel alloc] initWithVertexFunctionDescriptor:[[MTGFunctionDescriptor alloc] initWithName:@"name"]
                                                                              fragmentFunctionDescriptor:[[MTGFunctionDescriptor alloc] initWithName:@"name"]];
-    MTGRenderPlan *renderPlan = [[MTGRenderPlan alloc] initWithKernel:kernel]; // geometry, actions
-    MTGRenderPlanExpression *expression = [[MTGRenderPlanExpression alloc] initWithRenderPlan: renderPlan];
+    MTGRenderRecipe *renderRecipe = [[MTGRenderRecipe alloc] initWithKernel:kernel]; // geometry, actions
+    MTGRenderRecipeExpression *expression = [[MTGRenderRecipeExpression alloc] initWithRenderRecipe: renderRecipe];
     
     return [[MTGImage alloc] initWithExpression:expression];
 }

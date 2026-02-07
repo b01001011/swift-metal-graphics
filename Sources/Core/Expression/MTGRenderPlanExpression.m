@@ -1,18 +1,18 @@
-#import "MTGRenderPlanExpression.h"
+#import "MTGRenderRecipeExpression.h"
 
-@interface MTGRenderPlanExpression ()
+@interface MTGRenderRecipeExpression ()
 
-@property (nonatomic, strong, readonly) MTGRenderPlan *renderPlan;
+@property (nonatomic, strong, readonly) MTGRenderRecipe *renderRecipe;
 
 @end
 
-@implementation MTGRenderPlanExpression
+@implementation MTGRenderRecipeExpression
 
-- (instancetype)initWithRenderPlan:(MTGRenderPlan *)renderPlan {
+- (instancetype)initWithRenderRecipe:(MTGRenderRecipe *)renderRecipe {
     self = [super init];
     
     if(self) {
-        _renderPlan = renderPlan;
+        _renderRecipe = renderRecipe;
     }
     
     return self;

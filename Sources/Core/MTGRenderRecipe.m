@@ -1,6 +1,6 @@
-#import "MTGRenderPlan.h"
+#import "MTGRenderRecipe.h"
 
-@implementation MTGRenderPlan
+@implementation MTGRenderRecipe
 
 - (instancetype)initWithKernel:(MTGRenderPipelineKernel *)kernel {
     self = [super init];

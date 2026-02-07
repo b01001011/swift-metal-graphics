@@ -13,6 +13,7 @@
         _blue = blue;
         _alpha = alpha;
     }
+
     return self;
 }
 
